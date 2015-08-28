@@ -29,7 +29,7 @@ class CreateCursos extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('notes');
+		Schema::drop('cursos');
 
 	}
 
