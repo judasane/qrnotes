@@ -12,7 +12,7 @@ class CreateCursos extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('cartones', function(Blueprint $table){
+		Schema::create('cursos', function(Blueprint $table){
 			$table->increments("id");
 			$table->string("nombre");
 			$table->string("codigo");
