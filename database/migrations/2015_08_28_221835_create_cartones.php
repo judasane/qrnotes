@@ -18,8 +18,8 @@ class CreateCartones extends Migration {
 			$table->string("alias");
 			$table->integer("cant_notes");
 			$table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users') ->onDelete('cascade');
 			$table->timestamps();
+			$table->foreign('user_id')->references('id')->on('users') ->onDelete('cascade');
 		});
 	}
 

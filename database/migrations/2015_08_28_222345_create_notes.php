@@ -15,14 +15,15 @@ class CreateNotes extends Migration {
 		Schema::create('notes', function(Blueprint $table){
 			$table->increments("id");
 			$table->integer('carton_id')->unsigned();
-            $table->foreign('carton_id')->references('id')->on('cartones') ->onDelete('cascade');
             $table->text('descripcion');
             $table->text("contenido");
             $table->integer("numero");
             $table->enum('tipo', ['audio', 'video','imagen','url']);
-            $table->integer("curso_id");
-            $table->foreign('curso_id')->references('id')->on('cursos') ->onDelete('cascade');
+            $table->integer("curso_id")->unsigned();
+            
 			$table->timestamps();
+			$table->foreign('carton_id')->references('id')->on('cartones') ->onDelete('cascade');
+			$table->foreign('curso_id')->references('id')->on('cursos') ->onDelete('cascade');
 		});
 	}
 
