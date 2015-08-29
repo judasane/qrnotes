@@ -40,7 +40,7 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Bienvenidos a Qrnotes</div>
+				<div class="title">Hola Monica</div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
