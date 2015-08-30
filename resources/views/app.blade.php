@@ -19,6 +19,7 @@
 	<![endif]-->
 </head>
 <body>
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
