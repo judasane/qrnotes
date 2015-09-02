@@ -131,7 +131,7 @@
                                 Las notas que guardes en Qrnotes están disponibles online, sólo ingresa a tu cuenta y tendrás acceso a todos tus qrnotes
                             </p>
                         </div>
-                        <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
+                        <div class="caracteristicas col s10  l3 offset-m0 offset-l1 offset-s-1 separado">
                             <div class="icono-caracteristica amber darken-2">
                                 <i class="material-icons white-text medium">thumb_up</i>
                             </div>
