@@ -1,0 +1,28 @@
+#caja-opaca{
+    padding-top:1px;
+    background: rgba(255,255,255,0.93);
+    color:#444;
+}
+#caja-opaca h6{
+    font-size: 1.3rem;
+}
+#header-principal{
+    font-size: 3rem;
+}
+#download-button{
+    margin-bottom: -25px;
+    border-radius: 15px;
+}
+body{
+    background-color: #eee;
+}
+.caja-blanca{
+    background-color: white;
+    
+}
+#sub-caracteristicas{
+    font-size: 1.5rem;
+    color:#999;
+    margin:0;
+    padding: 0;
+}
