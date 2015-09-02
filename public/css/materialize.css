@@ -5124,7 +5124,7 @@ span.badge {
     
   /*personal*/
     .row .col.offset-s-1 {
-    margin-left: -8.5%; 
+    margin-left: -10%; 
 }
     @media only screen and (min-width : 601px) {
       .row .col.m1 {
@@ -5162,6 +5162,8 @@ span.badge {
         margin-left: 0; }
       .row .col.m12 {
         width: 100%;
+        margin-left: 0; }
+      .row .col.offset-m0 {
         margin-left: 0; }
       .row .col.offset-m1 {
         margin-left: 8.33333%; }

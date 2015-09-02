@@ -93,7 +93,7 @@
             <div class="container1">
                 <div class="section">
                     <div class="row">
-                        <div class="caracteristicas col s10 l3 offset-s-1 separado">
+                        <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
                             <div class="icono-caracteristica green lighten-2 ">
                                 <i class="material-icons white-text medium">visibility</i>
                             </div>
@@ -102,7 +102,7 @@
                                 Tus cuadernos lucirán mejor tras utilizar qrnotes, nuestros diseños atractivos y la posibilidad de personalización harán que realmente resalten
                             </p>
                         </div>
-                        <div class="caracteristicas col s10 l3 offset-l1 offset-s-1 separado">
+                        <div class="caracteristicas col s10  l3 offset-m0 offset-l1 offset-s-1 separado">
                             <div class="icono-caracteristica blue lighten-2">
                                 <i class="material-icons white-text medium">done</i>
                             </div>
@@ -111,7 +111,7 @@
                                 Tan fácil como pegar un sticker, luego solo tienes que escanearlo para subir tus archivos o para leer los mismos. Nunca tomar nota de gráficos o funciones fue tan fácil
                             </p>
                         </div>
-                        <div class="caracteristicas col s10 l3 offset-l1 offset-s-1">
+                        <div class="caracteristicas col s10 l3 offset-m0 offset-l1 offset-s-1">
                             <div class="icono-caracteristica red lighten-2">
                                 <i class="material-icons white-text medium">video_library</i>
                             </div>
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="caracteristicas col s10 l3 offset-s-1 separado">
+                        <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
                             <div class="icono-caracteristica teal lighten-2">
                                 <i class="material-icons white-text medium">my_location</i>
                             </div>
@@ -131,7 +131,7 @@
                                 Las notas que guardes en Qrnotes están disponibles online, sólo ingresa a tu cuenta y tendrás acceso a todos tus qrnotes
                             </p>
                         </div>
-                        <div class="caracteristicas col s10 l3 offset-l1 offset-s-1 separado">
+                        <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
                             <div class="icono-caracteristica amber darken-2">
                                 <i class="material-icons white-text medium">thumb_up</i>
                             </div>
@@ -140,7 +140,7 @@
                                 No se te haga raro cuando te pregunten qué son esas etiquetas raras, comparte tu experiencia y así enriqueceremos el ecosistema qrnote
                             </p>
                         </div>
-                        <div class="caracteristicas col s10 l3 offset-l1 offset-s-1 separado">
+                        <div class="caracteristicas col s10  l3  offset-l1 offset-m0 offset-s-1 separado">
                             <div class="icono-caracteristica brown lighten-2">
                                 <i class="material-icons white-text medium">label_outline</i>
                             </div>
