@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -11,6 +10,7 @@
         <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/inicio.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
     <body>
         <nav class="white" role="navigation">
@@ -68,16 +68,16 @@
                             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
                             <h5 class="center">Por estudiantes y para estudiantes</h5>
 
-                            <p class="light">QRnotes ha sido diseñado por estudiantes que conocen la dinámica de las clases y a partir de ello salen las funcionalidades que te ofrecemos. Sin embargo estamos abiertos a sugerencias, si deseas contáctanos a <a href="mailto:contacto@qrnotes.co">nuestro email</a> o a través de redes sociales como <a href="http://twitter.com/qrnotes">@qrnotes</a></p>
+                            <p class="light">QRnotes ha sido diseñado por estudiantes que conocen la dinámica de las clases y a partir de ello salen las funcionalidades que te ofrecemos. Sin embargo estamos abiertos a sugerencias, si deseas contáctanos a <a  class="deep-orange-text " href="mailto:contacto@qrnotes.co">nuestro email</a> o a través de redes sociales como <a class="deep-orange-text " href="http://twitter.com/qrnotes">@qrnotes</a></p>
                         </div>
                     </div>
 
                     <div class="col s12 m4">
                         <div class="icon-block">
-                            <h2 class="center brown-text"><i class="material-icons">visibility</i></h2>
-                            <h5 class="center">Visualmente atractivo</h5>
+                            <h2 class="center brown-text"><img id="un" src="img/un.png"></h2>
+                            <h5 class="center">Diseñado para la UN</h5>
 
-                            <p class="light">Si la idea que viene a tu cabeza al pensar en códigos QR es de un diagrama de barras aburrido y monótono, empieza a hacerte a otra idea, ya que nuestros stickers tienen un atractivo diseño que incluso puedes personalizar con el tipo de medio que ingreses.</p>
+                            <p class="light">Iniciamos nuestro proceso creativo en la Universidad Nacional, así que no solo está diseñado por estudiantes y para estudiantes, sino que tenemos en cuenta la experiencia académica en la UNAL para brindar una funcionalidad cada vez mayor a nuestra apicación.</p>
                         </div>
                     </div>
                 </div>
@@ -90,15 +90,67 @@
         <div class="col s12 center">
             <h4>Características</h4>
             <h3 id="sub-caracteristicas">Conoce un poco más de QRnotes</h3>
-            <div class="container">
+            <div class="container1">
                 <div class="section">
                     <div class="row">
-
-                        <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-
+                        <div class="caracteristicas col s12 l3">
+                            <div class="icono-caracteristica green lighten-2">
+                                <i class="material-icons white-text medium">visibility</i>
+                            </div>
+                            <h5 class="left-align">Visualmente atractivo</h5>
+                            <p class="left-align">
+                                Tus cuadernos lucirán mejor tras utilizar qrnotes, nuestros diseños atractivos y la posibilidad de personalización harán que realmente resalten
+                            </p>
+                        </div>
+                        <div class="caracteristicas col s12 l3 offset-l1">
+                            <div class="icono-caracteristica blue lighten-2">
+                                <i class="material-icons white-text medium">done</i>
+                            </div>
+                            <h5 class="left-align">Práctico</h5>
+                            <p class="left-align">
+                                Tan fácil como pegar un sticker, luego solo tienes que escanearlo para subir tus archivos o para leer los mismos. Nunca tomar nota de gráficos o funciones fue tan fácil
+                            </p>
+                        </div>
+                        <div class="caracteristicas col s12 l3 offset-l1">
+                            <div class="icono-caracteristica red lighten-2">
+                                <i class="material-icons white-text medium">video_library</i>
+                            </div>
+                            <h5 class="left-align">Multimedia</h5>
+                            <p class="left-align">
+                                Puedes guardar cualquier tipo de archivo, incluso direcciones web, así tu experiencia de repaso será más cómoda, puedes guardar desde audios hasta vídeos, utilízalos creativamente
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="caracteristicas col s12 l3">
+                            <div class="icono-caracteristica teal lighten-2">
+                                <i class="material-icons white-text medium">my_location</i>
+                            </div>
+                            <h5 class="left-align">Desde cualquier lugar</h5>
+                            <p class="left-align">
+                                Las notas que guardes en Qrnotes están disponibles online, sólo ingresa a tu cuenta y tendrás acceso a todos tus qrnotes
+                            </p>
+                        </div>
+                        <div class="caracteristicas col s12 l3 offset-l1">
+                            <div class="icono-caracteristica amber darken-2">
+                                <i class="material-icons white-text medium">thumb_up</i>
+                            </div>
+                            <h5 class="left-align">Divertido</h5>
+                            <p class="left-align">
+                                No se te haga raro cuando te pregunten qué son esas etiquetas raras, comparte tu experiencia y así enriqueceremos el ecosistema qrnote
+                            </p>
+                        </div>
+                        <div class="caracteristicas col s12 l3 offset-l1">
+                            <div class="icono-caracteristica brown lighten-2">
+                                <i class="material-icons white-text medium">label_outline</i>
+                            </div>
+                            <h5 class="left-align">Mantén el orden</h5>
+                            <p class="left-align">
+                                ¿Cansado de tus gráficos chuecos?, utiliza qrnotes y tus cuadernos lucirán mucho mejor, olvídate de manchones de tinta al dibujar o de cuando no trajiste regla
+                            </p>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <!--Fin de cuadro de características-->
@@ -109,8 +161,8 @@
         <div class="parallax-container valign-wrapper">
             <div class="section no-pad-bot">
                 <div class="container">
-                    <div class="row center">
-                        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+                    <div class="row center mensaje">
+                        <h5 class="header col s12 light black-text">Diseñado para tí especialmente</h5>
                     </div>
                 </div>
             </div>
@@ -122,59 +174,47 @@
 
                 <div class="row">
                     <div class="col s12 center">
-                        <h3><i class="mdi-content-send brown-text"></i></h3>
-                        <h4>Contact Us</h4>
-                        <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                        <h3>¿?</h3>
+                        <h4>¿Qué son exactamente qrnotes?</h4>
+                        <p class="left-align ">Qrnotes es un sistema de ayuda para la toma de apuntes, basado en códigos QR, códigos de barras que te permitirán tomar notas de forma interactiva, sólo pega los qrnotes a tu cuaderno, escanea el código y sube la foto, vídeo o el archivo que quieras para consultarlo después.</p>
+                        <p class="left-align ">Así tus cuadernos estarán más organizados, podrás prestar más atención a clase y tus repasos serán mucho más entretenidos.</p>
                     </div>
                 </div>
 
             </div>
         </div>
 
-
-        <div class="parallax-container valign-wrapper">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <div class="row center">
-                        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-        </div>
-
-        <footer class="page-footer teal">
+        <footer class="page-footer grey darken-4">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">Company Bio</h5>
-                        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+                        <h5 class="white-text">Importante</h5>
+                        <p class="grey-text text-lighten-4">QRnotes es una aplicación para la ayuda académica que está actualmente en <strong class="deep-orange-text text-lighten-2">desarrollo</strong>, así que estamos abiertos a sugerencias, sin embargo resaltamos la palabra desarrollo porque aún falta mucho por mejorar. Si tienes sugerencias o simplemente quieres contactarnos, puedes hacerlo a través de nuestras formas de contacto </p>
 
 
                     </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Settings</h5>
+                    <div class="col l3 s12 left-align">
+                        <h5 class="white-text">Contacto</h5>
                         <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
+                            <li><a  href="http://twitter.com/qrnotes"><i class="fa fa-twitter-square"></i> @qrnotes</a></li>
+                            <li><a  href="http://facebook.com/qrnotes"><i class="fa fa-facebook-square"></i> Fanpage</a></li>
+                            <li><a  href="mailto:contacto@qrnotes.co"><i class="fa fa-envelope"></i> contacto@qrnotes.co</a></li>
                         </ul>
                     </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Connect</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
+                    <div class="col l3 s12 left-align">
+                        <h5 class="white-text">Navegación</h5>
+                        <ul >
+                            <li><a  href="#!">Pioneros</a></li>
+                            <li><a href="#!">Dónde comprar</a></li>
+                            <li><a href="#!">Link 3</a></li>
+                            <li><a  href="#!">Link 4</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                    Qrnotes es un producto <a class="brown-text text-lighten-3" href="http://facebook.com/sinexiones">Sinexiones</a>
                 </div>
             </div>
         </footer>
