@@ -75,3 +75,10 @@ body{
     font-size: 1.1rem;
     line-height: 2rem;
 }
+
+.row .col.offset-s-1 {
+      margin-left: -17%; 
+}
+.separado{
+    margin-bottom:6%;
+}
