@@ -23,3 +23,5 @@ Route::controller("auth",'Auth\AuthController');
 // ]);
 
 Route::get('pruebas', 'Hola');
+
+Route::get("app",view("app"));
