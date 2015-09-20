@@ -196,8 +196,9 @@
                     <div class="col l3 s12 left-align">
                         <h5 class="white-text">Contacto</h5>
                         <ul>
-                            <li><a  href="http://twitter.com/qrnotesco"><i class="fa fa-twitter-square"></i> @qrnotesco</a></li>
-                            <li><a  href="http://facebook.com/qrnotes"><i class="fa fa-facebook-square"></i> Fanpage</a></li>
+                            <li><a  href="http://twitter.com/qrnotesco"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                            <li><a  href="http://facebook.com/qrnotes"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                            <li><a  href="http://plus.google.com/+qrnotesplus"><i class="fa fa-google-plus-square"></i> Google Plus</a></li>
                             <li><a  href="mailto:contacto@qrnotes.co"><i class="fa fa-envelope"></i> contacto@qrnotes.co</a></li>
                         </ul>
                     </div>
