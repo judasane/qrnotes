@@ -89,6 +89,11 @@ body {
     width:100%;
 }
 
+.brand-logo{
+    margin-top:0.8rem;
+}
+
+
 /*@media only screen and (min-width : 601px) {*/
 /*    .offset-m0 {*/
 /*        margin-left: -8.33333%;*/

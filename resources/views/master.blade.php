@@ -18,7 +18,7 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="{{ url('/') }}" class="brand-logo">Logo</a>
+                <a id="logo-container" href="{{ url('/') }}" class="brand-logo"><img src="/img/logo.png"/></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url('/') }}">Inicio</a></li>
                     <li><a href="#">Sé un pionero</a></li>
