@@ -27,3 +27,10 @@ Route::get('app', function()
 {
     return view('master');
 });
+
+
+
+Route::get("pruebasblade",function()
+{
+    return view('inicio');
+});
