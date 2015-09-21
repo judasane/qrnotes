@@ -24,7 +24,7 @@
 </div>
 <!--Cuadro de características-->
 <div class="col s12 center">
-    <h4>Características</h4>
+    <h4>Cómo funciona</h4>
     <h3 id="sub-caracteristicas">Conoce un poco más de QRnotes</h3>
     <div class="container1">
         <div class="section">
