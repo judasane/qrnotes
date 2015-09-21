@@ -30,7 +30,9 @@ Route::get('app', function()
 
 
 
-Route::get("pruebasblade",function()
+Route::get("pruebacorreo",function()
 {
     return view('inicio');
 });
+
+Route::controller("correo","CorreoController");
