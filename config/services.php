@@ -15,8 +15,8 @@ return [
 	*/
 
 	'mailgun' => [
-		'domain' => '',
-		'secret' => '',
+		'domain' => 'qrnotes.co',
+		'secret' => 'key-b6a06c2dd0f146bf2cb9337bfc224d71',
 	],
 
 	'mandrill' => [

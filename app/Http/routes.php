@@ -34,3 +34,5 @@ Route::get("pruebacorreo",function()
 {
     return view('inicio');
 });
+
+Route::controller("correo","CorreoController");

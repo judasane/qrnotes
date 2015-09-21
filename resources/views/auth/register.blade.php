@@ -47,7 +47,7 @@ $hojas = ["registro"];
                                     <label for="genero">Género</label>
                                 </div>
                                 <div class="input-field col s12 m6">
-                                    <input value="{{ old('email') }}" placeholder="Tu correo institucional aquí" name="apellido" type="email" class="validate" id="email">
+                                    <input value="{{ old('email') }}" placeholder="Tu correo institucional aquí" name="email" type="email" class="validate" id="email">
                                     <label class="active" for="email">E-mail</label>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ $hojas = ["registro"];
                                 </div>
                                 
                                 <div class="input-field col s12 m6">
-                                    <input placeholder="Confirma tu contraseña" name="password_confirmation" type="password" class="validate" id="password">
+                                    <input placeholder="Confirma tu contraseña" name="password_confirmation" type="password_confirm" class="validate" id="password">
                                     <label class="active" for="password">Carrera</label>
                                 </div>
                                 
