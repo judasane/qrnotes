@@ -1,5 +1,6 @@
 @extends("layouts.master")
 @section('title', 'Notas Interactivas')
+@section('description','Qrnotes es una nueva forma de tomar apuntes, con la ayuda de códigos QR usados como stickers, tus apuntes serán realmente interactivos')
 @section("content")
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -8,7 +9,7 @@
             <div id="caja-opaca">
                 <h1 class="header center" id="header-principal">Una nueva forma de tomar apuntes</h1>
                 <div class="row center">
-                    <h6 class="header col s12 light">Haz que tus cuadernos sean interactivos con algo tan sencillo como pegar un sticker</h6>
+                    <h6 class="header col s12 light">Haz que tus cuadernos sean realmente interactivos con algo tan sencillo como pegar un sticker, es como subir archivos a tu cuaderno</h6>
                 </div>
                 <div class="row center">
                     <a href="http://qrnotes.co/registro" id="download-button" class="btn-large waves-effect waves-light deep-orange lighten-2">Solicítalo aquí</a>
@@ -21,8 +22,77 @@
     </div>
     <div class="parallax"><img src="img/lapiz.jpg" alt="Unsplashed background img 1"></div>
 </div>
+<!--Cuadro de características-->
+<div class="col s12 center">
+    <h4>Características</h4>
+    <h3 id="sub-caracteristicas">Conoce un poco más de QRnotes</h3>
+    <div class="container1">
+        <div class="section">
+            <div class="row">
+                <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
+                    <div class="icono-caracteristica green lighten-2 ">
+                        <i class="white-text fa fa-camera-retro medium"></i>
+                    </div>
+                    <h5 class="left-align">1. Toma la foto</h5>
+                    <p class="left-align">
+                        Cuando estés en clase y veas que el profe dibujó un gráfico importante en el tablero, pero no quieres copiarlo, tómale una foto
+                    </p>
+                </div>
+                <div class="caracteristicas col s10  l3 offset-m0 offset-l1 offset-s-1 separado">
+                    <div class="icono-caracteristica blue lighten-2">
+                        <i class="fa fa-sticky-note white-text medium"></i>
+                    </div>
+                    <h5 class="left-align">2. Pega tu QRnote</h5>
+                    <p class="left-align">
+                        Retira el sticker de tu hoja de QRnotes y pégalo en la parte del cuaderno en la que estás tomando notas
+                    </p>
+                </div>
+                <div class="caracteristicas col s10 l3 offset-m0 offset-l1 offset-s-1">
+                    <div class="icono-caracteristica red lighten-2">
+                        <i class="fa fa-qrcode white-text medium"></i>
+                    </div>
+                    <h5 class="left-align">3. Escanea tu código </h5>
+                    <p class="left-align">
+                        Escanea tu QRnote con tu lector en el celular y sube la foto que acabas de tomar en la página a la que el código te lleva
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
+                    <div class="icono-caracteristica teal lighten-2">
+                        <i class="fa fa-book white-text medium"></i>
+                    </div>
+                    <h5 class="left-align">4. Estudia tus apuntes</h5>
+                    <p class="left-align">
+                        En el momento de repaso, escanea tu QRnote, este te dirigirá al archivo que subiste. Así tendrás siempre acceso a los archivos relacionados con tus apuntes
+                    </p>
+                </div>
+                <div class="caracteristicas col s10 l3 offset-m0 offset-l1 offset-s-1 separado">
+                    <div class="icono-caracteristica red lighten-2">
+                        <i class="material-icons white-text medium">video_library</i>
+                    </div>
+                    <h5 class="left-align">Cualquier tipo de archivo</h5>
+                    <p class="left-align">
+                        Puedes guardar cualquier tipo de archivo, incluso direcciones web, así tu experiencia de repaso será más cómoda, puedes guardar desde audios hasta vídeos, utilízalos creativamente
+                    </p>
+                </div>
+                <div class="caracteristicas col s10  l3  offset-l1 offset-m0 offset-s-1 separado">
+                    <div class="icono-caracteristica brown lighten-2">
+                        <i class="material-icons white-text medium">label_outline</i>
+                    </div>
+                    <h5 class="left-align">Mantén el orden</h5>
+                    <p class="left-align">
+                        ¿Cansado de tus gráficos chuecos?, utiliza qrnotes y tus cuadernos lucirán mucho mejor, olvídate de manchones de tinta al dibujar o de cuando no trajiste regla
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin de cuadro de características-->
 
 
+<!--detalles-->
 <div class="nocontainer">
     <div class="section caja-blanca">
 
@@ -49,7 +119,7 @@
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center brown-text"><img id="un" src="img/un.png"></h2>
-                    <h5 class="center">Diseñado para la UN</h5>
+                    <h5 class="center">Diseñado en la UN</h5>
 
                     <p class="light">Iniciamos nuestro proceso creativo en la Universidad Nacional, así que no solo está diseñado por estudiantes y para estudiantes, sino que tenemos en cuenta la experiencia académica en la UNAL para brindar una funcionalidad cada vez mayor a nuestra apicación.</p>
                 </div>
@@ -60,100 +130,9 @@
 </div>
 <!--fin de primer cuadro de detalles-->
 
-<!--Cuadro de características-->
-<div class="col s12 center">
-    <h4>Características</h4>
-    <h3 id="sub-caracteristicas">Conoce un poco más de QRnotes</h3>
-    <div class="container1">
-        <div class="section">
-            <div class="row">
-                <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
-                    <div class="icono-caracteristica green lighten-2 ">
-                        <i class="material-icons white-text medium">visibility</i>
-                    </div>
-                    <h5 class="left-align">Visualmente atractivo</h5>
-                    <p class="left-align">
-                        Tus cuadernos lucirán mejor tras utilizar qrnotes, nuestros diseños atractivos y la posibilidad de personalización harán que realmente resalten
-                    </p>
-                </div>
-                <div class="caracteristicas col s10  l3 offset-m0 offset-l1 offset-s-1 separado">
-                    <div class="icono-caracteristica blue lighten-2">
-                        <i class="material-icons white-text medium">done</i>
-                    </div>
-                    <h5 class="left-align">Práctico</h5>
-                    <p class="left-align">
-                        Tan fácil como pegar un sticker, luego solo tienes que escanearlo para subir tus archivos o para leer los mismos. Nunca tomar nota de gráficos o funciones fue tan fácil
-                    </p>
-                </div>
-                <div class="caracteristicas col s10 l3 offset-m0 offset-l1 offset-s-1">
-                    <div class="icono-caracteristica red lighten-2">
-                        <i class="material-icons white-text medium">video_library</i>
-                    </div>
-                    <h5 class="left-align">Multimedia</h5>
-                    <p class="left-align">
-                        Puedes guardar cualquier tipo de archivo, incluso direcciones web, así tu experiencia de repaso será más cómoda, puedes guardar desde audios hasta vídeos, utilízalos creativamente
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
-                    <div class="icono-caracteristica teal lighten-2">
-                        <i class="material-icons white-text medium">my_location</i>
-                    </div>
-                    <h5 class="left-align">Desde cualquier lugar</h5>
-                    <p class="left-align">
-                        Las notas que guardes en Qrnotes están disponibles online, sólo ingresa a tu cuenta y tendrás acceso a todos tus qrnotes
-                    </p>
-                </div>
-                <div class="caracteristicas col s10  l3 offset-m0 offset-l1 offset-s-1 separado">
-                    <div class="icono-caracteristica amber darken-2">
-                        <i class="material-icons white-text medium">thumb_up</i>
-                    </div>
-                    <h5 class="left-align">Divertido</h5>
-                    <p class="left-align">
-                        No se te haga raro cuando te pregunten qué son esas etiquetas raras, comparte tu experiencia y así enriqueceremos el ecosistema qrnote
-                    </p>
-                </div>
-                <div class="caracteristicas col s10  l3  offset-l1 offset-m0 offset-s-1 separado">
-                    <div class="icono-caracteristica brown lighten-2">
-                        <i class="material-icons white-text medium">label_outline</i>
-                    </div>
-                    <h5 class="left-align">Mantén el orden</h5>
-                    <p class="left-align">
-                        ¿Cansado de tus gráficos chuecos?, utiliza qrnotes y tus cuadernos lucirán mucho mejor, olvídate de manchones de tinta al dibujar o de cuando no trajiste regla
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Fin de cuadro de características-->
 
 
 
 
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center mensaje">
-                <h5 class="header col s12 light black-text">Diseñado para tí especialmente</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="img/Estudiantes13.jpg" alt="Unsplashed background img 2"></div>
-</div>
 
-<div class="container">
-    <div class="section">
-
-        <div class="row">
-            <div class="col s12 center">
-                <h4>¿Qué es exactamente qrnotes?</h4>
-                <p class="left-align ">Qrnotes es un sistema de ayuda para la toma de apuntes, basado en códigos QR, códigos de barras que te permitirán tomar notas de forma interactiva, sólo pega los qrnotes a tu cuaderno, escanea el código y sube la foto, vídeo o el archivo que quieras para consultarlo después.</p>
-                <p class="left-align ">Así tus cuadernos estarán más organizados, podrás prestar más atención a clase y tus repasos serán mucho más entretenidos.</p>
-            </div>
-        </div>
-
-    </div>
-</div>
 @stop
