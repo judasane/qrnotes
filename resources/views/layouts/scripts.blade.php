@@ -1,6 +1,13 @@
 <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+<script src="{{ asset('/js/materialize.js') }}"></script>
+<script src="{{ asset('/js/init.js') }}"></script>
+@if(isset($scripts) && count($scripts)>0)
+@foreach($scripts as $script)
+<link href="{{ asset("/js/$script.css") }}" type='text/css' rel="stylesheet" media="screen,projection">
+@endforeach
+@endif
+
+
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
