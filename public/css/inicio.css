@@ -1,3 +1,4 @@
+
 #caja-opaca{
     padding-top:1px;
     background: rgba(255,255,255,0.93);
@@ -66,8 +67,11 @@ body{
 
 .mensaje{
     padding-top:1px;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.95);
     color:#444;
+}
+.mensaje p{
+    font-size: 1.3rem;
 }
 
 .page-footer a, .page-footer h5{
@@ -78,6 +82,15 @@ body{
 
 .separado{
     margin-bottom:6%;
+}
+
+body {
+    overflow-x: hidden;
+    width:100%;
+}
+
+.brand-logo{
+    margin-top:0.8rem;
 }
 
 
