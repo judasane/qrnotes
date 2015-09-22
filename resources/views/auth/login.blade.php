@@ -12,7 +12,7 @@ $vinculos = ["auth/register"=>"Regístrate acá","/"=>"Inicio"];
             <div class="panel panel-default">
                 <div class="panel-heading container">
                     <h3>Hola </h3>
-                    <h5>Acá podrás loguearte en nuestra aplicación</h5>
+                    <h5>Acá podrás entrar en nuestra aplicación</h5>
                 </div>
 
                 <div class="panel-body">
