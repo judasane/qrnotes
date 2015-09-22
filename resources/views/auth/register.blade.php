@@ -1,7 +1,9 @@
 @extends('layouts.master')
 @section('title', 'Regístrate aquí')
+@section('description','Regístrate acá en la aplicación que cambiará la forma de tomar apuntes. Nunca usar stickers fue tan útil')
 <?php
 $hojas = ["registro"];
+$vinculos = ["auth/register"=>"Inicia sesión","/"=>"Inicio"];
 ?>
 @section('content')
 <div class="container-fluid">
@@ -12,7 +14,7 @@ $hojas = ["registro"];
                 <div class="panel-body">
                     @if (count($errors) > 0)
                     <div class="alert alert-danger">
-                        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                        <strong>Ups!!</strong> Hubo algunos problemas con los datos que ingresaste.<br><br>
                         <ul>
                             @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>

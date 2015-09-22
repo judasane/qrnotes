@@ -1,7 +1,9 @@
 @extends('layouts.master')
-@section('title', 'Regístrate aquí')
+@section('title', 'Inicio de sesión')
+@section('description','Acá puedes iniciar sesión para utilizar la aplicación que cambiará la forma en que tomas notas. QRcodes para subir archivos a tu cuaderno')
 <?php
 $hojas = ["registro"];
+$vinculos = ["auth/register"=>"Regístrate acá","/"=>"Inicio"];
 ?>
 @section('content')
 <div class="container-fluid">
