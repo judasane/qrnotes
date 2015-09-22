@@ -1,0 +1,100 @@
+
+#caja-opaca{
+    padding-top:1px;
+    background: rgba(255,255,255,0.93);
+    color:#444;
+}
+#caja-opaca h6{
+    font-size: 1.3rem;
+}
+#header-principal{
+    font-size: 3rem;
+}
+#download-button{
+    margin-bottom: -25px;
+    border-radius: 15px;
+}
+body{
+    background-color: #eee;
+}
+.caja-blanca{
+    background-color: white;
+    box-shadow: 0px 1px 10px 5px #ccc;
+    margin-bottom: 40px;
+
+}
+#sub-caracteristicas{
+    font-size: 1.5rem;
+    color:#999;
+    margin:0;
+    padding: 0;
+}
+.caracteristicas{
+    background-color: white;
+    padding: 0px;  
+    box-shadow: -5px 5px 20px 1px rgba(0,0,0,0.1);
+}
+.icono-caracteristica{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: -60px;
+    box-shadow: -5px 5px 20px 1px rgba(0,0,0,0.1);
+    /*border-radius: 10px;*/
+}
+.caracteristicas h5{
+    margin-top: 1rem;
+    color: black;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    font-size: 1.4
+
+}
+.caracteristicas p{
+    line-height: 1.3rem;
+}
+.container1 {
+    margin: 0 100px;
+    max-width: 1280px;
+    width: 90%; }
+
+.icono-caracteristica i{
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+}
+#un{
+    height: 2rem;
+}
+
+.mensaje{
+    padding-top:1px;
+    background: rgba(255,255,255,0.95);
+    color:#444;
+}
+.mensaje p{
+    font-size: 1.3rem;
+}
+
+.page-footer a, .page-footer h5{
+    color: #ffaa99;
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.separado{
+    margin-bottom:6%;
+}
+
+body {
+    overflow-x: hidden;
+    width:100%;
+}
+
+.brand-logo{
+    margin-top:0.8rem;
+}
+
+
+/*@media only screen and (min-width : 601px) {*/
+/*    .offset-m0 {*/
+/*        margin-left: -8.33333%;*/
+/*    } }*/
