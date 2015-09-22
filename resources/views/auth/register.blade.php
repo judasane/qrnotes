@@ -3,7 +3,7 @@
 @section('description','Regístrate acá en la aplicación que cambiará la forma de tomar apuntes. Nunca usar stickers fue tan útil')
 <?php
 $hojas = ["registro"];
-$vinculos = ["auth/register"=>"Inicia sesión","/"=>"Inicio"];
+$vinculos = ["auth/login"=>"Inicia sesión","/"=>"Inicio"];
 ?>
 @section('content')
 <div class="container-fluid">

@@ -42,14 +42,21 @@ $vinculos = ["auth/register"=>"Regístrate acá","/"=>"Inicio"];
                             <div class="row">
 
 
-                                <div class="col m2">
+                                <div class="col s5 m2">
                                     <button type="submit" class="btn btn-primary">
-                                        Inicia sesión
+                                        Login
                                     </button>
                                 </div>
-                                <div class="col s12 m3">
+                                <div class="col s5 m2">
                                     <input type="checkbox"  id="filled-in-box" checked="checked" />
-                                    <label for="filled-in-box">Mantenerte logueado</label>
+                                    <label for="filled-in-box">Recordarme</label>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m4">
+                                    <a href="{{ asset("/auth/password/email") }}">¿Olvidaste tu contraseña?</a>
+                                        
                                 </div>
                             </div>
 

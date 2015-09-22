@@ -34,5 +34,28 @@ class PasswordController extends Controller {
 
 		$this->middleware('guest');
 	}
-
+        
+        public function getIndex(){
+            return redirect("/auth/password/email");
+        }
+        
+        public function getNew(){
+            $this->getReset();
+        }
+        
+        /**
+	 * Display the password reset view for the given token.
+	 *
+	 * @param  string  $token
+	 * @return Response
+	 */
+	public function getReset($token = null)
+	{
+		if (is_null($token))
+		{
+			throw new NotFoundHttpException;
+		}
+                
+		return view('auth.reset',["token"=>$token]);
+	}
 }

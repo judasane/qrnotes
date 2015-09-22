@@ -55,3 +55,10 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+.btn{
+    background-color: #FF8A65;
+}
+.btn:hover{
+    background-color: #FA9;
+}
