@@ -38,7 +38,7 @@ $hojas = ["registro"];
                                 </div>
                             </div>
                             <div class="row">
-                                
+
 
                                 <div class="col m2">
                                     <button type="submit" class="btn btn-primary">
@@ -59,56 +59,5 @@ $hojas = ["registro"];
             </div>
         </div>
     </div>
-</div>
-@endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form-group">
-    <div class="col-md-6 col-md-offset-4">
-
-    </div>
-</div>
-
-<div class="form-group">
-    <div class="col-md-6 col-md-offset-4">
-        <button type="submit" class="btn btn-primary">Login</button>
-
-        <a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-    </div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
 </div>
 @endsection
