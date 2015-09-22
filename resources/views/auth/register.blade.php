@@ -39,7 +39,7 @@ $hojas = ["registro"];
 
                             <div class="row">
                                 <div class="input-field col s12 m6">
-                                    <select id="genero" name="genero" >
+                                    <select id="genero" >
                                         <option value="" disabled selected>¿Eres chico o chica?</option>
                                         <option value="femenino">Chica</option>
                                         <option value="masculino">Chico</option>
@@ -58,12 +58,23 @@ $hojas = ["registro"];
                                     <label class="active" for="carrera">Carrera</label>
                                 </div>
                                 <div class="input-field col s12 m6">
-                                    <input value="{{ old('nacimiento') }}" placeholder="¿Cuándo naciste?" name="nacimiento" type="date" class=" validate" id="apellido">
+                                    <input value="{{ old('apellido') }}" placeholder="¿Cuándo naciste?" name="nacimiento" type="date" class="datepicker validate" id="apellido">
                                     <label class="active" for="apellido">Fecha de nacimiento</label>
                                 </div>
                             </div>
 
-                           
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <input " placeholder="Digita tu contraseña" name="password" type="password" class="validate" id="password">
+                                    <label class="active" for="password">Contraseña</label>
+                                </div>
+                                
+                                <div class="input-field col s12 m6">
+                                    <input placeholder="Confirma tu contraseña" name="password_confirmation" type="password" class="validate" id="password">
+                                    <label class="active" for="password_confirmation">Confirmación de contraseña</label>
+                                </div>
+                                
+                            </div>
                             
                             <div class="col m6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
