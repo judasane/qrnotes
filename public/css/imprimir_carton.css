@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+@page{
+    color:blue;
+    margin-top: 0.5cm;
+    margin-left:0.5cm;
+    margin-right: 0;
+}
+
+
+
+#logo{
+    height: 2cm;
+    
+}
+
+.recorte{
+    margin: 0.1cm;
+    float: left;
+    border-radius: 0.2cm;
+    width: 2.5cm;
+    background-color: #e2dfff;
+    /*background-color: #4f1212;*/
+    padding:0.5cm;
+    -webkit-print-color-adjust: exact;
+}
+
+.subrecorte{
+    border-radius: 0.2cm;
+    height: 2.5cm;
+    width: 2.5cm;
+    background-color: #fff;
+    
+    -webkit-print-color-adjust: exact;
+}
+
+.texto{
+    background-color: white;
+    height: 1.3cm;
+    width: 100%;
+    margin-top: 0.3cm;
+    border-radius: 0.3cm;
+}
+img{
+    border-radius: 0.2cm;
+}

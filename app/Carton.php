@@ -5,5 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 class Carton extends Model {
 
     protected $table = 'Cartones';
-
+    
+    
+    
+    
 }

@@ -15,7 +15,7 @@ $vinculos = ["auth/register"=>"Regístrate acá","auth/login"=>"O inicia sesión
                     <h6 class="header col s12 light">Haz que tus cuadernos sean realmente interactivos con algo tan sencillo como pegar un sticker, es como subir archivos a tu cuaderno</h6>
                 </div>
                 <div class="row center">
-                    <a href="http://qrnotes.co/registro" id="download-button" class="btn-large waves-effect waves-light deep-orange lighten-2">Solicítalo aquí</a>
+                    <a href="http://qrnotes.co/auth/register" id="download-button" class="btn-large waves-effect waves-light deep-orange lighten-2">Solicítalo aquí</a>
                 </div>
             </div>
 
