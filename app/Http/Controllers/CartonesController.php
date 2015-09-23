@@ -12,9 +12,9 @@ class CartonesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		//
+	public function getIndex(){
+		return 
+            "Hola, soy un cartón";
 	}
 
 	/**
