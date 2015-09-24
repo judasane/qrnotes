@@ -13,9 +13,12 @@ class CartonesController extends Controller {
 	 * @return Response
 	 */
 	public function getIndex(){
-		return 
-            "Hola, soy un cartón";
+		return "Hola, soy un cartón";
 	}
+        
+        public function getHola($nombre=null,$apellido=null){
+            return "hola $nombre, cómo $apellido esás=";
+        }
 
 	/**
 	 * Show the form for creating a new resource.
