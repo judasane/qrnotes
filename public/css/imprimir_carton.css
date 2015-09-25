@@ -14,7 +14,7 @@
 
 #logo{
     height: 2cm;
-    
+
 }
 
 .recorte{
@@ -33,7 +33,7 @@
     height: 2.5cm;
     width: 2.5cm;
     background-color: #fff;
-    
+
     -webkit-print-color-adjust: exact;
 }
 

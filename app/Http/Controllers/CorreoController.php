@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class CorreoController extends Controller {
 
-    private $email="";
-    
+    private $email = "";
+
     public function getIndex() {
         return view('correo');
     }

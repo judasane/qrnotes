@@ -3,7 +3,7 @@
 @section('description','Regístrate acá en la aplicación que cambiará la forma de tomar apuntes. Nunca usar stickers fue tan útil')
 <?php
 $hojas = ["registro"];
-$vinculos = ["auth/login"=>"Inicia sesión","/"=>"Inicio"];
+$vinculos = ["auth/login" => "Inicia sesión", "/" => "Inicio"];
 ?>
 @section('content')
 <div class="container-fluid">
@@ -53,7 +53,7 @@ $vinculos = ["auth/login"=>"Inicia sesión","/"=>"Inicio"];
                                     <label class="active" for="email">E-mail</label>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="input-field col s12 m6">
                                     <input value="{{ old('carrera') }}" placeholder="¿Qué estudias?" name="carrera" type="text" class="validate" id="carrera">
@@ -65,8 +65,8 @@ $vinculos = ["auth/login"=>"Inicia sesión","/"=>"Inicio"];
                                 </div>
                             </div>
 
-                           
-                            
+
+
                             <div class="col m6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Regístrate

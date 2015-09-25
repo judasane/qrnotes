@@ -3,7 +3,7 @@
 @section('description','Qrnotes es una nueva forma de tomar apuntes, con la ayuda de códigos QR usados como stickers, tus apuntes serán realmente interactivos')
 @section("content")
 <?php
-$vinculos = ["auth/register"=>"Regístrate acá","auth/login"=>"O inicia sesión aquí"];
+$vinculos = ["auth/register" => "Regístrate acá", "auth/login" => "O inicia sesión aquí"];
 ?>
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">

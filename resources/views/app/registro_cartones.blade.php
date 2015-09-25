@@ -3,7 +3,7 @@
 @section('description','Ya compraste tu pack de QRnotes, ahora puedes registrarlo aquí para empezar a usarlos')
 <?php
 $hojas = ["registro"];
-$vinculos = ["auth/register"=>"Tus packs"];
+$vinculos = ["auth/register" => "Tus packs"];
 ?>
 @section('content')
 <div class="container-fluid">
@@ -29,12 +29,12 @@ $vinculos = ["auth/register"=>"Tus packs"];
                         <form  method="POST" action="{{ url('/a') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             @if(isset($numero))
-                                <input type="hidden" name="numero" value="{{$numero}}">
+                            <input type="hidden" name="numero" value="{{$numero}}">
                             @endif
                             <div class="row">
                                 <div class="input-field col s12 m3">
                                     <input placeholder="El número de tu pack" name="numero" type="text"  id="numero" @if(isset($numero)) value="{{$numero}}" disabled @endif>
-                                    <label class="active" for="numero">Número de pack</label>
+                                           <label class="active" for="numero">Número de pack</label>
                                 </div>
                                 <div class="input-field col s12 m3">
                                     <input placeholder="Código de seguridad" name="codigo" type="text"  id="codigo">

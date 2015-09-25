@@ -35,12 +35,11 @@ use AuthenticatesAndRegistersUsers;
 
         $this->middleware('guest', ['except' => 'getLogout']);
     }
-    
-    public function getIndex(){
-         return redirect("auth/login");
+
+    public function getIndex() {
+        return redirect("auth/login");
     }
-    
-    
+
     public function postRegister(Request $request) {
         $validator = $this->registrar->validator($request->all());
 

@@ -16,9 +16,9 @@
             <div class="subrecorte">
                 <img src="img/qrnotes.png" height="100%" width="100%">
             </div>
-<!--            <div class="texto">
-                
-            </div>-->
+            <!--            <div class="texto">
+                            
+                        </div>-->
         </div>
         @endfor
 

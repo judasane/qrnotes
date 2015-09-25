@@ -3,7 +3,7 @@
 @section('description','Acá puedes iniciar sesión para utilizar la aplicación que cambiará la forma en que tomas notas. QRcodes para subir archivos a tu cuaderno')
 <?php
 $hojas = ["registro"];
-$vinculos = ["auth/register"=>"Regístrate acá","/"=>"Inicio"];
+$vinculos = ["auth/register" => "Regístrate acá", "/" => "Inicio"];
 ?>
 @section('content')
 <div class="container-fluid">
@@ -51,12 +51,12 @@ $vinculos = ["auth/register"=>"Regístrate acá","/"=>"Inicio"];
                                     <input type="checkbox"  id="filled-in-box" checked="checked" />
                                     <label for="filled-in-box">Recordarme</label>
                                 </div>
-                                
+
                             </div>
                             <div class="row">
                                 <div class="col s12 m4">
                                     <a href="{{ asset("/auth/password/email") }}">¿Olvidaste tu contraseña?</a>
-                                        
+
                                 </div>
                             </div>
 

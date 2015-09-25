@@ -3,7 +3,7 @@
 @section('description','Si olvidaste tu contraseña de QRnotes, no te preocupes, acá puedes reiniciarla')
 <?php
 $hojas = ["registro"];
-$vinculos = ["auth/register"=>"Regístrate acá","/"=>"Inicio"];
+$vinculos = ["auth/register" => "Regístrate acá", "/" => "Inicio"];
 ?>
 @section('content')
 <div class="container-fluid">
@@ -40,7 +40,7 @@ $vinculos = ["auth/register"=>"Regístrate acá","/"=>"Inicio"];
                                     </button>
                                 </div>
                             </div>
-                            
+
                         </form>
                     </div>
 

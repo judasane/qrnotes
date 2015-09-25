@@ -12,7 +12,7 @@ $hojas = ["registro"];
                     <h3>Hola {{$nombre}}</h3>
                     <h5>Acá podrás terminar tu registro</h5>
                 </div>
-                
+
                 <div class="panel-body">
                     @if (count($errors) > 0)
                     <div class="alert alert-danger">
@@ -36,14 +36,14 @@ $hojas = ["registro"];
                                     <input placeholder="Digita tu contraseña" name="password" type="password"  id="password">
                                     <label class="active" for="password">Contraseña</label>
                                 </div>
-                                
+
                                 <div class="input-field col s12 m6">
                                     <input placeholder="Confirma tu contraseña" name="password_confirmation" type="password"  id="password_confirmation">
                                     <label class="active" for="password_confirmation">Confirma tu contraseña</label>
                                 </div>
-                                
+
                             </div>
-                            
+
                             <div class="col m6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Regístrate
