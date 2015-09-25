@@ -14,7 +14,15 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 Route::controller("auth/password", 'Auth\PasswordController');
 Route::controller("auth", 'Auth\AuthController');
-Route::controller("pack","CartonesController");
+Route::controller("packs","CartonesController");
+
+
+
+
+Route::get("a/{numero}","CartonesController@getPack");
+Route::get("a","CartonesController@getIndex");
+Route::post("a","CartonesController@postPack");
+
 
 Route::get('app', function() {
     return view('master');
@@ -25,4 +33,8 @@ Route::get('pruebas', function()
     return view("carton");
 });
 
+// Route::get('a', function()
+// {
+//     return view("app.registro_cartones");
+// });
 

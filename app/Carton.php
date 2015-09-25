@@ -4,9 +4,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carton extends Model {
 
-    protected $table = 'Cartones';
+    protected $table = 'cartones';
     
-    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
     
     
 }
