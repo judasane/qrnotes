@@ -12,7 +12,8 @@ class CreateFileentriesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('fileentries', function(Blueprint $table)
+		
+		Schema::create('fileentries', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('filename');
