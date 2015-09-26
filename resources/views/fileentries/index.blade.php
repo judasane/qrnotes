@@ -14,7 +14,7 @@
  
     <ul>
  @foreach($entries as $entry)
-        <li>{{entry->filename}}</li>
+        <li>{{$entry->filename}}</li>
  @endforeach
     </ul>
  </div>
