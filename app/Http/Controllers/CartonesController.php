@@ -47,9 +47,9 @@ class CartonesController extends Controller {
                 return view("app.registro_cartones")->withNumero($numero);
             } else {
                 if ($pack->user_id == Auth::user()->id) {
-                    return "soy tu cartón";
+                    return view("app.pack")->withPack($pack);
                 } else {
-                    return "este cartón no te pertenece";
+                    return "este pack no te pertenece";
                 }
             }
             return $pack->alias;

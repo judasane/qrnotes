@@ -10,7 +10,7 @@
             Gracias por crear una cuenta con nosotros.
             Estamos seguros de que te encantará usar QRnotes.
             Por favor sigue el siguiente vínculo para verificar tu dirección de correo:
-            {{ URL::to('auth/verificar' . "?code=$confirmation_code") }}.<br/>
+            {{ URL::to('auth/verificar' . "?code=$confirmation_code") }}<br/>
         </div>
 
     </body>

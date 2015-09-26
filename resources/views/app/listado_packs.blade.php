@@ -12,6 +12,7 @@ $hojas = ["listado_packs"];
 <div class="container">
     <h1>Listado de todos tus packs</h1>
     @include('app.packs')
+    
 </div>
 
 
