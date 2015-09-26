@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCartones extends Migration {
+class CreatePacks extends Migration {
 
 	/**
 	 * Run the migrations.
