@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration {
             $table->rememberToken();
             $table->timestamps();
         });
-        DB::table('cuentas')->insert([
+        DB::table('users')->insert([
             ['nombre' => "qrnotes",
                 'apellido' => "qrnotes",
                 'genero' => "femenino",
