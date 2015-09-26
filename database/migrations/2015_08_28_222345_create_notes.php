@@ -14,6 +14,7 @@ class CreateNotes extends Migration {
         Schema::create('notes', function(Blueprint $table) {
             $table->increments("id");
             $table->integer('pack_id')->unsigned();
+            $table->integer('curso_id')->unsigned();
             $table->text('titulo',30);
             $table->text('descripcion');
             $table->text("contenido");
