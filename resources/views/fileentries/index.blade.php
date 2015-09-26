@@ -3,7 +3,8 @@
 @section('description','Aquí subir tus archivos');
 @section('content')
  
-    <form action="add" method="post" enctype="multipart/form-data">
+    <form action="fileentry/add" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="file" name="filefield">
         <input type="submit">
     </form>
