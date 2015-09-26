@@ -1,0 +1,20 @@
+/*Hoja de estilos para plantilla de listado de cartones en /a/*/
+/*título no tan grande*/
+h1{font-size: 2rem}
+
+.alerta{
+    background-color: #FF8A65;
+    color: white !important;
+    border-radius: 4px;
+    
+}
+.usado{
+    background-color: #ddd !important;
+    color: #aaa !important;
+    /*box-shadow: inset 1px 1px 1px 1px #bbb;*/
+}
+
+.usado .alerta{
+    background-color: #aaa;
+    color: #ddd !important;
+}

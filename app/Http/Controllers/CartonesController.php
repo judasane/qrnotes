@@ -31,7 +31,9 @@ class CartonesController extends Controller {
      * @return Response
      */
     public function getIndex() {
-        return "Listado ";
+        $packs=  Auth::user()->packs;
+        return view("app.listado_packs")->withPacks($packs);
+        
     }
 
     public function getPack($numero) {
