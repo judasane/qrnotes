@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration {
                 'genero' => "femenino",
                 'email' => "contacto@qrnotes.co",
                 'carrera' => "",
-                "password" => "ñslldfasd980870",
+                "password" => "ñslldfasd98070",
                 'nacimiento' => "2015-09-1"
             ],]);
     }
