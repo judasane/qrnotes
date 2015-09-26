@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
 }
-
+/*Cambia el margen de la hoja*/
 @page{
     color:blue;
     margin-top: 0.5cm;
@@ -37,12 +37,13 @@
     -webkit-print-color-adjust: exact;
 }
 
+/*Espacio para escribir*/
 .texto{
     background-color: white;
     height: 1.3cm;
     width: 100%;
     margin-top: 0.3cm;
-    border-radius: 0.3cm;
+    border-radius: 0.1cm;
 }
 img{
     border-radius: 0.2cm;

@@ -23,6 +23,9 @@ Route::get("a/{numero}", "PacksController@getPack");
 Route::get("a", "PacksController@getIndex");
 Route::post("a", "PacksController@postPack");
 
+Route::get("generar","PacksController@getGenerar");
+Route::post("generar","PacksController@postGenerar");
+
 
 Route::get('app', function() {
     return view('master');

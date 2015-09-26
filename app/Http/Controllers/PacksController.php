@@ -38,7 +38,7 @@ class PacksController extends Controller {
 
     public function getPack($numero) {
         $numero = substr($numero, 1);
-        $numero = $this->decodificar($numero);
+        $numero = \App\Classes\Numeracion::decodificar($numero);
         $pack = \App\Pack::find($numero);
         if ($pack == null) {
             return "Qué chistosito, el pack al que intentas acceder aún no se ha impreso";
@@ -74,6 +74,30 @@ class PacksController extends Controller {
         }
     }
 
+    /**
+     * Muestra formulario de generación de packs
+     * @return Página de generación de packs
+     */
+    public function getGenerar(){
+        if (Auth::user()->email=="judasane@gmail.com"){
+            return view("app.generar");
+        }else{
+            return "Estás intentando hacer algo que no está bien";
+        }        
+    }
+    
+    /**
+     * Genera un cartón listo para imprimir siempre que se use en chrome
+     * @return Página del cartón
+     */
+    public function postGenerar(){
+        if (Auth::user()->email=="judasane@gmail.com"){
+            return view("carton");
+        }else{
+            return "Estás intentando hacer algo que no está bien";
+        }        
+    }
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -130,27 +154,6 @@ class PacksController extends Controller {
      */
     public function destroy($id) {
         //
-    }
-
-    function codificar($id) {
-        $alphabet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $shortenedId = '';
-        while ($id > 0) {
-            $remainder = $id % 62;
-            $id = ($id - $remainder) / 62;
-            $shortenedId = $alphabet{$remainder} . $shortenedId;
-        };
-        return $shortenedId;
-    }
-
-    private function decodificar($id) {
-        $alphabet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        $number = 0;
-        foreach (str_split($id) as $letter) {
-            $number = ($number * 62) + strpos($alphabet, $letter);
-        }
-        return $number;
     }
 
 }
