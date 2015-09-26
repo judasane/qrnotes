@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Http\Request;
 
-class CartonesController extends Controller {
+class PacksController extends Controller {
 
     /**
      * Create a new controller instance.
@@ -39,7 +39,7 @@ class CartonesController extends Controller {
     public function getPack($numero) {
         $numero = substr($numero, 1);
         $numero = $this->decodificar($numero);
-        $pack = \App\Carton::find($numero);
+        $pack = \App\Pack::find($numero);
         if ($pack == null) {
             return "Qué chistosito, el pack al que intentas acceder aún no se ha impreso";
         } else {
@@ -60,7 +60,7 @@ class CartonesController extends Controller {
         $numero = $request->input("numero");
         $codigo = $request->input("codigo");
         $alias = $request->input("alias");
-        $pack = \App\Carton::find($numero);
+        $pack = \App\Pack::find($numero);
         $userPackCount = Auth::user()->packs()->count() + 1;
         // Condiciones: debe pertenecer al usuario id=1 (qrnotes), y debe coincidir el estado con el código de seguridad
         if ($pack->user->id == 1 && $pack->estado == $codigo) {

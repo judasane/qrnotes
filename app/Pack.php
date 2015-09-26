@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Carton extends Model {
+class Pack extends Model {
 
-    protected $table = 'cartones';
+    protected $table = 'packs';
 
     public function user() {
         return $this->belongsTo('App\User');

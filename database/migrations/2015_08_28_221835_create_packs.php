@@ -12,7 +12,7 @@ class CreateCartones extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('cartones', function(Blueprint $table){
+		Schema::create('packs', function(Blueprint $table){
 			$table->increments("id");
 			$table->string("estado");
 			$table->string("alias");
@@ -30,7 +30,7 @@ class CreateCartones extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('cartones');
+		Schema::drop('packs');
 	}
 
 }

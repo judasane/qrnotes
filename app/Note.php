@@ -9,7 +9,7 @@ class Note extends Model {
     protected $table = 'notes';
 
     public function pack() {
-        return $this->belongsTo('App\Carton');
+        return $this->belongsTo('App\Pack');
     }
 
 }

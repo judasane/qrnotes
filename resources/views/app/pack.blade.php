@@ -14,7 +14,7 @@ $vinculos = ["a" => "Tus packs"];
 
     <div class="row">
         @foreach($pack->notes as $note)
-        <div class="card col m4">
+        <div class="card col m3 s6">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{$note->contenido}}">
             </div>
