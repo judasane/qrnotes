@@ -26,7 +26,8 @@ class FileEntryController extends Controller {
  
 		$file = Request::file('filefield');
 		$extension = $file->getClientOriginalExtension();
-		Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+                Storage::disk('google')->put($file->getFilename().'.'.$extension,  File::get($file));
+//		Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
 		$entry = new Fileentry();
 		$entry->mime = $file->getClientMimeType();
 		$entry->original_filename = $file->getClientOriginalName();
@@ -41,7 +42,7 @@ class FileEntryController extends Controller {
         public function get($filename){
 	
 		$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
-		$file = Storage::get($entry->filename);
+		$file = Storage::disk("google")->get($entry->filename);
 
 
 
