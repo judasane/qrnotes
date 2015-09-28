@@ -25,6 +25,13 @@ Route::post("a", "PacksController@postPack");
 
 Route::get("generar","PacksController@getGenerar");
 Route::post("generar","PacksController@postGenerar");
+//lleva al cartón para imprimir
+Route::get("generar/impreso/{numero}","PacksController@getImpreso");
+
+Route::get("arreglar","PacksController@arreglar");
+
+Route::get("probando{prueba?}","PacksController@prueba");
+Route::controller("a/{pack}/{note}","NotesController");
 
 
 Route::get('app', function() {
@@ -38,7 +45,10 @@ Route::get('fileentry/get/{filename}', [
 	'as' => 'getentry', 'uses' => 'FileEntryController@get']);
 Route::post('fileentry/add',[ 
         'as' => 'addentry', 'uses' => 'FileEntryController@add']);
-
+//Generador de urls para el robot generador de imágenes
 Route::get("urls/{cantidad}","PacksController@getUrls");
 
 Route::controller("archivos","ArchivosController");
+
+
+

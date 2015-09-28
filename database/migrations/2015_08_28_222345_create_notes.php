@@ -19,7 +19,7 @@ class CreateNotes extends Migration {
             $table->text('descripcion');
             $table->text("contenido");
             $table->integer("numero");
-            $table->enum('tipo', ['audio', 'video', 'imagen', 'url']);
+            $table->enum('tipo', ['imagen', 'video', 'audio', 'url']);
             $table->timestamps();
             $table->foreign('pack_id')->references('id')->on('packs')->onDelete('cascade');
             $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('cascade');

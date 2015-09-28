@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
@@ -8,7 +9,6 @@ use App\Fileentry;
 use Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
-
 
 class PacksController extends Controller {
 
@@ -49,7 +49,7 @@ class PacksController extends Controller {
                 return view("app.registro_cartones")->withNumero($numero);
             } else {
                 if ($pack->user_id == Auth::user()->id) {
-                    return view("app.pack")->withPack($pack);
+                    return view("app.pack")->withNotes($pack->notes()->orderBy("numero","asc")->get());
                 } else {
                     return "este pack no te pertenece";
                 }
@@ -65,9 +65,9 @@ class PacksController extends Controller {
      * @return string
      */
     public function postPack(Request $request) {
-        $numero = $request->input("numero");
-        $codigo = $request->input("codigo");
-        $alias = $request->input("alias");
+        $numero = Request::input("numero");
+        $codigo = Request::input("codigo");
+        $alias = Request::input("alias");
         $pack = \App\Pack::find($numero);
         $userPackCount = Auth::user()->packs()->count() + 1;
         // Condiciones: debe pertenecer al usuario id=1 (qrnotes), y debe coincidir el estado con el código de seguridad
@@ -111,37 +111,46 @@ class PacksController extends Controller {
             foreach ($files as $file) {
                 $extension = $file->getClientOriginalExtension();
                 $nombreOriginal = $file->getClientOriginalName();
-                $nombreGenerado=$file->getFilename();
+                $nombreGenerado = $file->getFilename();
                 $arreglo[$arreglo["cantidad"]] = [
-                    "nombre_generado" => $nombreGenerado. "." . $extension,
+                    "nombre_generado" => $nombreGenerado . "." . $extension,
                     "nombre_original" => $nombreOriginal
                 ];
-                
+
                 $arreglo["cantidad"] ++;
-                
+
                 Storage::disk("local")->put($nombreOriginal, File::get($file));
-                
+
                 $entry = new Fileentry();
                 $entry->mime = $file->getClientMimeType();
                 $entry->original_filename = $nombreOriginal;
                 $entry->filename = $nombreOriginal;
                 $entry->save();
 
-                if (strpos($nombreOriginal,"-")) {
+                if (strpos($nombreOriginal, "-")) {
                     $note = new \App\Note();
                     $note->pack_id = $pack->id;
                     $note->curso_id = 1;
-                    $note->titulo = "ninguno";
-                    $note->descripcion = "ninguno";
-                    $note->contenido = "ninguno";
+                    $note->titulo = "Note no usada";
+                    $note->descripcion = "Utiliza tu note escaneando el código en el sticker de tus QRnotes";
+                    $note->contenido = "http://http//www.qrnotes.co/img/upload.png";
                     $note->numero = $numero = substr($nombreOriginal, 3);
                     $note->save();
                 }
             }
+            $arreglo["pack_id"] = $pack->id;
             return $arreglo;
         } else {
             return "No tienes permisos para generar cartones";
         }
+    }
+
+    public function getImpreso($numero) {
+        $pack = \App\Pack::find($numero);
+        ;
+        $codigo = $pack->estado;
+        $actual = \App\Classes\Numeracion::codificar($numero);
+        return view("app.impresion")->withActual($actual)->withCodigo($codigo);
     }
 
     public function getUrls($cantidad) {
@@ -166,6 +175,23 @@ class PacksController extends Controller {
                 echo "c$ur-$j <br>";
             }
         }
+    }
+
+    public function arreglar() {
+
+        $notes = \App\Note::all();
+        foreach($notes as $note){
+            $note->titulo = "Inactiva";
+            $note->descripcion = "Utiliza tu note escaneando el código en el sticker de tus QRnotes";
+            $note->contenido = "http://www.qrnotes.co/img/upload.png";
+            $note->save();
+
+         echo "listo";   
+        }
+    }
+    
+    public function prueba($prueba){
+        return $prueba;
     }
 
 }

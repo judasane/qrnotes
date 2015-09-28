@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
+
     <IfModule mod_negotiation.c>
         Options -MultiViews
     </IfModule>
@@ -13,3 +14,5 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+php_value max_file_uploads 33

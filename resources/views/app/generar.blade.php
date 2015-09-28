@@ -4,7 +4,7 @@
 <?php
 $vinculos = ["a" => "Tus packs"];
 $hojas = ["registro", "dropzone"];
-$scripts = ["dropzone","dropzoneconfig"];
+$scripts = ["dropzone", "dropzoneconfig"];
 ?>
 
 @section('content')
@@ -23,7 +23,7 @@ $scripts = ["dropzone","dropzoneconfig"];
                     <div class="row">
                         <input type="file" name="file" />
                         
-                        <div class="col s5 m2">
+            <div class="col s5 m2">
                             <button type="submit" class="btn btn-primary">
                                 Generar
                             </button>

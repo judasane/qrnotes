@@ -1,0 +1,9 @@
+/*Borde al dropzone*/
+.dropzone{
+    border-radius: 20px;
+    border-style: dashed;
+}
+
+/*.dz-message{
+    color:red;
+}*/
