@@ -20,7 +20,6 @@ class CreateCursos extends Migration {
             $table->timestamps();
         });
         DB::table('cursos')->insert([
-            
             ['nombre' => "ninguno",
                 'codigo' => "ninguno",
                 'profesor' => "ninguno",
