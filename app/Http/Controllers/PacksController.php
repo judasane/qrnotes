@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
-use Illuminate\Http\Request;
+use App\Fileentry;
+use Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+
 
 class PacksController extends Controller {
 
@@ -18,24 +21,23 @@ class PacksController extends Controller {
         $this->middleware('auth');
     }
 
-    // public function getNew($numero=null){
-    // 	return view("app/registro_cartones");
-    // }
-    //   public function getHola($nombre=null,$apellido=null){
-    //       return "hola $nombre, cómo $apellido esás=";
-    //   }
-
     /**
-     * Display a listing of the resource.
-     *
-     * @return Response
+     * Si el usuario está logueado, muestra sus packs, de lo contrario, redirige
+     * al login
+     * @return Vista con todos los packs del usuario
      */
     public function getIndex() {
-        $packs=  Auth::user()->packs;
+        $packs = Auth::user()->packs;
         return view("app.listado_packs")->withPacks($packs);
-        
     }
 
+    /**
+     * Muestra el pack. En caso de que no esté aún registrado, envía al formulario
+     * de registro del mismo. En caso de que el pack sea de otro usuario, lo informa
+     * y si el pack no está aún generado, también.
+     * @param type $numero Número codificado en base 62, iniciando con c. ej:ca para 10
+     * @return Vista
+     */
     public function getPack($numero) {
         $numero = substr($numero, 1);
         $numero = \App\Classes\Numeracion::decodificar($numero);
@@ -56,6 +58,12 @@ class PacksController extends Controller {
         }
     }
 
+    /**
+     * Permite registrar el pack, para que sea propiedad del usuario, a la vez
+     * que valida la autenticidad del mismo
+     * @param Request $request
+     * @return string
+     */
     public function postPack(Request $request) {
         $numero = $request->input("numero");
         $codigo = $request->input("codigo");
@@ -76,84 +84,87 @@ class PacksController extends Controller {
 
     /**
      * Muestra formulario de generación de packs
-     * @return Página de generación de packs
+     * @return Vista de generación de packs
      */
-    public function getGenerar(){
-        if (Auth::user()->email=="judasane@gmail.com"){
+    public function getGenerar() {
+        if (Auth::user()->email == "judasane@gmail.com") {
             return view("app.generar");
-        }else{
+        } else {
             return "Estás intentando hacer algo que no está bien";
-        }        
-    }
-    
-    /**
-     * Genera un cartón listo para imprimir siempre que se use en chrome
-     * @return Página del cartón
-     */
-    public function postGenerar(){
-        if (Auth::user()->email=="judasane@gmail.com"){
-            return view("carton");
-        }else{
-            return "Estás intentando hacer algo que no está bien";
-        }        
-    }
-    
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create() {
-        //
+        }
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
+     * Genera un cartón listo para imprimir, siempre que se use en chrome
+     * @return json con la respuesta
      */
-    public function store() {
-        //
+    public function postGenerar() {
+        if (Auth::user()->email == "judasane@gmail.com") {
+            $files = Request::file('filefield');
+            $arreglo = ["cantidad" => 0];
+            $pack = new \App\Pack();
+            $pack->user_id = 1;
+            $pack->cant_notes = count($files);
+            $pack->alias = "no usado";
+            $pack->estado = str_random(6);
+            $pack->save();
+            foreach ($files as $file) {
+                $extension = $file->getClientOriginalExtension();
+                $nombreOriginal = $file->getClientOriginalName();
+                $nombreGenerado=$file->getFilename();
+                $arreglo[$arreglo["cantidad"]] = [
+                    "nombre_generado" => $nombreGenerado. "." . $extension,
+                    "nombre_original" => $nombreOriginal
+                ];
+                
+                $arreglo["cantidad"] ++;
+                
+                Storage::disk("local")->put($nombreOriginal . '.' . $extension, File::get($file));
+                $entry = new Fileentry();
+                $entry->mime = $file->getClientMimeType();
+                $entry->original_filename = $nombreOriginal;
+                $entry->filename = $nombreGenerado. '.' . $extension;
+                $entry->save();
+
+                if (strpos($nombreOriginal,"-")) {
+                    $note = new \App\Note();
+                    $note->pack_id = $pack->id;
+                    $note->curso_id = 1;
+                    $note->titulo = "ninguno";
+                    $note->descripcion = "ninguno";
+                    $note->contenido = "ninguno";
+                    $note->numero = $numero = substr($nombreOriginal, 3);
+                    $note->save();
+                }
+            }
+            return $arreglo;
+        } else {
+            return "No tienes permisos para generar cartones";
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id) {
-        //
-    }
+    public function getUrls($cantidad) {
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id) {
-        //
-    }
+//        for($i=1;$i<=$cantidad;$i++){
+//            $ur=\App\Classes\Numeracion::codificar($i);
+//            for($j=1;$j<=20;$j++){
+//                if($j==1){
+//                    echo "http://qrnotes.co/a/c$ur <br>";
+//                }
+//                echo "http://qrnotes.co/a/c$ur/$j <br>";
+//            }
+//            
+//        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function update($id) {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id) {
-        //
+        for ($i = 1; $i <= $cantidad; $i++) {
+            $ur = \App\Classes\Numeracion::codificar($i);
+            for ($j = 1; $j <= 20; $j++) {
+                if ($j == 1) {
+                    echo "c$ur <br>";
+                }
+                echo "c$ur-$j <br>";
+            }
+        }
     }
 
 }

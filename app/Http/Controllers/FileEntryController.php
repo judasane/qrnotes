@@ -42,11 +42,8 @@ class FileEntryController extends Controller {
         public function get($filename){
 	
 		$entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
-		$file = Storage::disk("google")->get($entry->filename);
-
-
-
-		return (new Response($file, 200))
+		$file = Storage::disk("cloud")->get($entry->filename);
+                return (new Response($file, 200))
               ->header('Content-Type', $entry->mime);
 	}
         

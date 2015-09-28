@@ -38,3 +38,7 @@ Route::get('fileentry/get/{filename}', [
 	'as' => 'getentry', 'uses' => 'FileEntryController@get']);
 Route::post('fileentry/add',[ 
         'as' => 'addentry', 'uses' => 'FileEntryController@add']);
+
+Route::get("urls/{cantidad}","PacksController@getUrls");
+
+Route::controller("archivos","ArchivosController");

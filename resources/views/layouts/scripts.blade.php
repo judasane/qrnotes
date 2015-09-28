@@ -3,7 +3,8 @@
 <script src="{{ asset('/js/init.js') }}"></script>
 @if(isset($scripts) && count($scripts)>0)
 @foreach($scripts as $script)
-<link href="{{ asset("/js/$script.css") }}" type='text/css' rel="stylesheet" media="screen,projection">
+<script src="{{ asset("/js/$script.js") }}"></script>
+
 @endforeach
 @endif
 
