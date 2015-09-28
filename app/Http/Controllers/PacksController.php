@@ -119,11 +119,12 @@ class PacksController extends Controller {
                 
                 $arreglo["cantidad"] ++;
                 
-                Storage::disk("local")->put($nombreOriginal . '.' . $extension, File::get($file));
+                Storage::disk("local")->put($nombreOriginal, File::get($file));
+                
                 $entry = new Fileentry();
                 $entry->mime = $file->getClientMimeType();
                 $entry->original_filename = $nombreOriginal;
-                $entry->filename = $nombreGenerado. '.' . $extension;
+                $entry->filename = $nombreOriginal;
                 $entry->save();
 
                 if (strpos($nombreOriginal,"-")) {
