@@ -41,8 +41,8 @@ class NotesController extends Controller {
         $packid = \App\Classes\Numeracion::decodificar(substr($pack, 1));
         $pack = \App\Pack::find($packid);
         $note = $pack->notes()->where("numero", $note)->first();
-
-        if (Request::has('filefield')) {
+        $retorno = "nada";
+        if (Request::hasFile('filefield')) {
             $file = Request::file('filefield');
             $extension = $file->getClientOriginalExtension();
             Storage::disk("google")->put($file->getFilename() . '.' . $extension, File::get($file));
@@ -54,14 +54,18 @@ class NotesController extends Controller {
             $entry->save();
             $note->contenido = "http://www.qrnotes.co/archivos/cloud/$nombreAsignado";
             $note->titulo = "Activa";
-        }else{
-            $titulo=Request::input("titulo");
-            $descripcion=Request::input("descripcion");
-            $note->titulo=$titulo;
-            $note->descripcion=$descripcion;
+            $retorno = "cambio";
+            $note->save();
+        } else {
+            $titulo = Request::input("titulo");
+            $descripcion = Request::input("descripcion");
+            $note->titulo = $titulo;
+            $note->descripcion = $descripcion;
+            $note->save();
+            return back();
         }
-        $note->save();
-        return $note->id;
+        
+        
     }
 
     public function getRegistro($pack, $note, $otro) {

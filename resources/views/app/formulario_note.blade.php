@@ -15,7 +15,7 @@ $hojas = ["registro"];
 
     <div class="caja-blanca  row">
 
-        <form  method="POST"  action="#">
+        <form  method="POST"  action="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="row">
                 <div class="input-field col s12 m3">

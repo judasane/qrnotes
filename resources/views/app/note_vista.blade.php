@@ -2,7 +2,8 @@
 @section('title', $note->titulo)
 @section('description','Escaneaste tu código, ahora es hora de vincular un archivo')
 <?php
-$vinculos = ["a" => "Tus packs"];
+
+$vinculos = ["a" => "Tus packs","a/c".$note->pack->id=>"Vuelta al pack"];
 $hojas = ["registro"];
 //$scripts = ["dropzone", "dropzone_note"];
 ?>

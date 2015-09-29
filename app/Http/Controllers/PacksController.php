@@ -119,7 +119,7 @@ class PacksController extends Controller {
 
                 $arreglo["cantidad"] ++;
 
-                Storage::disk("local")->put($nombreOriginal, File::get($file));
+                Storage::disk("generados")->put($nombreOriginal, File::get($file));
 
                 $entry = new Fileentry();
                 $entry->mime = $file->getClientMimeType();

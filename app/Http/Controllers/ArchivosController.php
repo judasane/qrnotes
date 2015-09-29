@@ -26,6 +26,14 @@ class ArchivosController extends Controller {
     public function getLocal($nombre) {
         return $this->get($nombre, "local");
     }
+    
+    /**
+     * 
+     * @param type $nombre Nombre del archivo
+     */
+    public function getGenerados($nombre) {
+        return $this->get($nombre, "generados");
+    }
 
     public function getNaked($nombre) {
         return $this->getN($nombre, "local");

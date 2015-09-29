@@ -7,26 +7,31 @@
     </head>
     <body>
         <div>
+            <div class="info">
+                <h5 id="packno">Pack # {{$actual}}</h5>
+                <img src="http://www.qrnotes.co/archivos/generados/{{"c".$actual.".png"}}" height="80px" width="80px"/>
+                <a href="listo"><img src=" {{ asset('/img/logo gris.png') }} " id="logo"/></a>
 
-            <a href="listo"><img src=" {{ asset('/img/logo gris.png') }} " id="logo"/></a>
-            <img src="http://www.qrnotes.co/archivos/local/{{"c".$actual.".png"}}" height="80px" width="80px"/>
-            <h5>cartón N° {{$actual}}</h5>
-            Código de seguridad: {{$codigo}}
-            
-        </div>
-
-        @for ($i = 1; $i <= 20; $i++)
-        <div class="recorte">
-            <div class="subrecorte">
+            </div>
+            <div class="info" id="segundo" >
                 
-                <img src="http://www.qrnotes.co/archivos/local/{{"c".$actual."-".$i.".png"}}" height="100%" width="100%">
+                Código de seguridad: <br><span id="codigo">{{$codigo}}</span>
             </div>
-            <div class="texto">
-            </div>
+
         </div>
-        @endfor
+        <div id="contenedor">
+            @for ($i = 1; $i <= 20; $i++)
+            <div class="recorte">
+                <div class="subrecorte">
 
+                    <img src="http://www.qrnotes.co/archivos/generados/{{"c".$actual."-".$i.".png"}}" height="100%" width="100%">
+                </div>
+                <div class="texto">
+                </div>
+            </div>
+            @endfor
 
+        </div>
 
     </body>
 </html>
