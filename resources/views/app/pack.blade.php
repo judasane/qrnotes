@@ -17,7 +17,7 @@ $hojas = ["pack"];
     @if($i%4==0)
         <div class="row">
     @endif
-        <div class="col m3 s6 prueba" >
+        <div class="col m3 s12 prueba" >
             <a href="c{{\App\Classes\Numeracion::codificar($note->pack->id)}}/{{$note->numero}}"><div class="card  " >
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{$note->contenido}}">
