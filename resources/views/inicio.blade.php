@@ -12,7 +12,7 @@ $vinculos = ["auth/register" => "Regístrate acá", "auth/login" => "O inicia se
             <div id="caja-opaca">
                 <h1 class="header center" id="header-principal">Una nueva forma de tomar apuntes</h1>
                 <div class="row center">
-                    <h6 class="header col s12 light">Haz que tus cuadernos sean realmente interactivos con algo tan sencillo como pegar un sticker, es como subir archivos a tu cuaderno</h6>
+                    <h4 class="header col s12 light">¡Es como subir archivos a tu cuaderno!</h4>
                 </div>
                 <div class="row center">
                     <a href="http://qrnotes.co/auth/register" id="download-button" class="btn-large waves-effect waves-light deep-orange lighten-2">Solicítalo aquí</a>
