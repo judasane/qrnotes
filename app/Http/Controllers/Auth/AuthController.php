@@ -71,6 +71,7 @@ use AuthenticatesAndRegistersUsers;
     }
 
     /**
+     * Crea la contraseña del usuario 
      * Requiere id y password por post
      * @param Request $request
      */

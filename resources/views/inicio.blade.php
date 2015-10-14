@@ -33,15 +33,24 @@ $vinculos = ["auth/register" => "Regístrate acá", "auth/login" => "O inicia se
         <div class="section">
             <div class="row">
                 <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
+                    <div class="icono-caracteristica red lighten-2">
+                        <i class="fa fa-shopping-cart white-text medium"></i>
+                    </div>
+                    <h5 class="left-align">1. Adquiere tu pack (Gratis)</h5>
+                    <p class="left-align">
+                        Adquiere un pack de notes. <strike>Cómpralos en una papelería o contáctanos.</strike> (En esta etapa, los packs son <strong>GRATIS</strong>, así que aprovecha y adquiérelos ya!
+                    </p>
+                </div>
+                <div class="caracteristicas col s10  l3 offset-m0 offset-l1 offset-s-1 separado">
                     <div class="icono-caracteristica green lighten-2 ">
                         <i class="white-text fa fa-camera-retro medium"></i>
                     </div>
-                    <h5 class="left-align">1. Toma la foto</h5>
+                    <h5 class="left-align">2. Toma la foto</h5>
                     <p class="left-align">
                         Cuando estés en clase y veas que el profe dibujó un gráfico importante en el tablero, pero no quieres copiarlo, tómale una foto
                     </p>
                 </div>
-                <div class="caracteristicas col s10  l3 offset-m0 offset-l1 offset-s-1 separado">
+                <div class="caracteristicas col s10 l3 offset-m0 offset-l1 offset-s-1">
                     <div class="icono-caracteristica blue lighten-2">
                         <i class="fa fa-sticky-note white-text medium"></i>
                     </div>
@@ -50,43 +59,37 @@ $vinculos = ["auth/register" => "Regístrate acá", "auth/login" => "O inicia se
                         Retira el sticker de tu hoja de QRnotes y pégalo en la parte del cuaderno en la que estás tomando notas
                     </p>
                 </div>
-                <div class="caracteristicas col s10 l3 offset-m0 offset-l1 offset-s-1">
-                    <div class="icono-caracteristica red lighten-2">
-                        <i class="fa fa-qrcode white-text medium"></i>
-                    </div>
-                    <h5 class="left-align">3. Escanea tu código </h5>
-                    <p class="left-align">
-                        Escanea tu QRnote con tu lector en el celular y sube la foto que acabas de tomar en la página a la que el código te lleva
-                    </p>
-                </div>
             </div>
             <div class="row">
                 <div class="caracteristicas col s10 l3 offset-m0 offset-s-1 separado">
+                    <div class="icono-caracteristica red lighten-2">
+                        <i class="fa fa-qrcode white-text medium"></i>
+                    </div>
+                    <h5 class="left-align">4. Escanea tu código </h5>
+                    <p class="left-align">
+                        Escanea tu QRnote con tu lector en el celular y sube la foto que acabas de tomar en la página a la que el código te lleva
+                    </p>
+
+                </div>
+                <div class="caracteristicas col s10  l3  offset-l1 offset-m0 offset-s-1 separado">
                     <div class="icono-caracteristica teal lighten-2">
                         <i class="fa fa-book white-text medium"></i>
                     </div>
-                    <h5 class="left-align">4. Estudia tus apuntes</h5>
+                    <h5 class="left-align">5. Estudia tus apuntes</h5>
                     <p class="left-align">
                         En el momento de repaso, escanea tu QRnote, este te dirigirá al archivo que subiste. Así tendrás siempre acceso a los archivos relacionados con tus apuntes
                     </p>
                 </div>
                 <div class="caracteristicas col s10 l3 offset-m0 offset-l1 offset-s-1 separado">
-                    <div class="icono-caracteristica red lighten-2">
-                        <i class="material-icons white-text medium">video_library</i>
-                    </div>
-                    <h5 class="left-align">Cualquier tipo de archivo</h5>
-                    <p class="left-align">
-                        Puedes guardar cualquier tipo de archivo, incluso direcciones web, así tu experiencia de repaso será más cómoda, puedes guardar desde audios hasta vídeos, utilízalos creativamente
-                    </p>
-                </div>
-                <div class="caracteristicas col s10  l3  offset-l1 offset-m0 offset-s-1 separado">
                     <div class="icono-caracteristica brown lighten-2">
-                        <i class="material-icons white-text medium">label_outline</i>
+                        <i class="fa fa-bug white-text medium"></i>
                     </div>
-                    <h5 class="left-align">Mantén el orden</h5>
+                    <h5 class="left-align">Si notas algún error, repórtalo</h5>
                     <p class="left-align">
-                        ¿Cansado de tus gráficos chuecos?, utiliza qrnotes y tus cuadernos lucirán mucho mejor, olvídate de manchones de tinta al dibujar o de cuando no trajiste regla
+                        Qrnotes es una aplicación en constante desarrollo, por lo cual es posible que algo aún deba depurarse. Si ves algún tipo de error, por favor repórtalo por nuestros medios de contacto.
                     </p>
+
+
                 </div>
             </div>
         </div>
@@ -121,10 +124,10 @@ $vinculos = ["auth/register" => "Regístrate acá", "auth/login" => "O inicia se
 
             <div class="col s12 m4">
                 <div class="icon-block">
-                    <h2 class="center brown-text"><img id="un" src="img/un.png"></h2>
-                    <h5 class="center">Diseñado en la UN</h5>
+                    <h2 class="center brown-text"><i class="fa fa-flag"></i></h2>
+                    <h5 class="center">Hecho en Colombia</h5>
 
-                    <p class="light">Iniciamos nuestro proceso creativo en la Universidad Nacional, así que no solo está diseñado por estudiantes y para estudiantes, sino que tenemos en cuenta la experiencia académica en la UNAL para brindar una funcionalidad cada vez mayor a nuestra apicación.</p>
+                    <p class="light">Iniciamos nuestro proceso creativo en la Universidad Nacional, así que no solo está diseñado por estudiantes y para estudiantes, sino que hemos tenido en cuenta la experiencia en Colombia para hacerlo más acorde a ti.</p>
                 </div>
             </div>
         </div>
