@@ -54,11 +54,16 @@ use AuthenticatesAndRegistersUsers;
         return "Se ha enviado un correo de verificación a $user->email";
     }
 
+    /**
+     * Verifica el correo que fue enviado
+     * @param Request $request
+     * @return string
+     */
     public function getVerificar(Request $request) {
 
         $code = $request->input("code");
         if ($code == NULL || strlen($code) != 30) {
-            return "Has llegado acá por error";
+            return "Estás en el lugar equivocado"; //view("mensajes")->withMensaje("Estás en el lugar equivocado")->withDescripcion("No parece haber un código de verificación válido");
         } else {
 
             $user = \App\User::where("password", $code)->first();

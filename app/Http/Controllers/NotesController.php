@@ -42,7 +42,13 @@ class NotesController extends Controller {
                 }
             }
         }else{
-            return "Este pack no te pertenece";
+            if($pack->user_id!=1){
+                return view("mensajes")->withMensaje("Este pack no es tuyo")->withDescripcion("Intenta ingresar con otro pack, pues este no te pertenece");
+            }
+            else {
+            return redirect("a/c".\App\Classes\Numeracion::codificar($packid));
+                
+            }
         }
     }
 

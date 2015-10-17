@@ -43,7 +43,7 @@ class PacksController extends Controller {
         $numero = \App\Classes\Numeracion::decodificar($numero);
         $pack = \App\Pack::find($numero);
         if ($pack == null) {
-            return "Qué chistosito, el pack al que intentas acceder aún no se ha impreso";
+            return view("mensajes")->withMensaje("Ingresaste un pack inválido")->withDescripcion("El pack al que intentas acceder aún no se ha impreso");
         } else {
             if ($pack->user_id == 1) {
                 return view("app.registro_cartones")->withNumero($numero);
@@ -51,7 +51,7 @@ class PacksController extends Controller {
                 if ($pack->user_id == Auth::user()->id) {
                     return view("app.pack")->withNotes($pack->notes()->orderBy("numero", "asc")->get());
                 } else {
-                    return "este pack no te pertenece";
+                    return view("mensajes")->withMensaje("Este pack no es tuyo")->withDescripcion("Intenta ingresar con otro pack, pues este no te pertenece");
                 }
             }
             return $pack->alias;
@@ -78,7 +78,7 @@ class PacksController extends Controller {
             $pack->save();
             return "éxito!";
         } else {
-            return "fracaso";
+            return view("mensajes")->withMensaje("!Ups! Tenemos un problema")->withDescripcion("Existe un problema de seguridad al validar tu pack");
         }
     }
 
