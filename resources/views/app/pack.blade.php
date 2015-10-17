@@ -1,3 +1,4 @@
+<!--Plantilla que muestra todos los notes de un pack-->
 @extends('layouts.master')
 @section('title', 'Consulta tus notes')
 @section('description','Aquí puedes ver todas tus notes')

@@ -1,3 +1,4 @@
+<!--Plantilla que muestra una note-->
 @extends('layouts.master')
 @section('title', $note->titulo)
 @section('description','Escaneaste tu código, ahora es hora de vincular un archivo')
@@ -16,7 +17,7 @@ $hojas = ["registro"];
     
     <div class="caja-blanca  row">
         <p>{{$note->descripcion}}</p>
-        <img class="responsive-img" src="{{$note->contenido}}">
+        <a href="{{$note->contenido}}" title="Acceso a la imagen en tamaño completo"><img class="responsive-img" alt="$note->titulo" src="{{$note->contenido}}"></a>
     </div>
 </div>
 @stop
