@@ -49,7 +49,7 @@ class PacksController extends Controller {
                 return view("app.registro_cartones")->withNumero($numero);
             } else {
                 if ($pack->user_id == Auth::user()->id) {
-                    return view("app.pack")->withNotes($pack->notes()->orderBy("numero","asc")->get());
+                    return view("app.pack")->withNotes($pack->notes()->orderBy("numero", "asc")->get());
                 } else {
                     return "este pack no te pertenece";
                 }
@@ -128,12 +128,15 @@ class PacksController extends Controller {
                 $entry->save();
 
                 if (strpos($nombreOriginal, "-")) {
+
+                    
+                    $note->save();
                     $note = new \App\Note();
                     $note->pack_id = $pack->id;
                     $note->curso_id = 1;
-                    $note->titulo = "Note no usada";
+                    $note->titulo = "Inactiva";
                     $note->descripcion = "Utiliza tu note escaneando el código en el sticker de tus QRnotes";
-                    $note->contenido = "http://http//www.qrnotes.co/img/upload.png";
+                    $note->contenido = "http://www.qrnotes.co/img/upload.png";
                     $note->numero = $numero = substr($nombreOriginal, 3);
                     $note->save();
                 }
@@ -180,17 +183,17 @@ class PacksController extends Controller {
     public function arreglar() {
 
         $notes = \App\Note::all();
-        foreach($notes as $note){
+        foreach ($notes as $note) {
             $note->titulo = "Inactiva";
             $note->descripcion = "Utiliza tu note escaneando el código en el sticker de tus QRnotes";
             $note->contenido = "http://www.qrnotes.co/img/upload.png";
             $note->save();
 
-         echo "listo";   
+            echo "listo";
         }
     }
-    
-    public function prueba($prueba){
+
+    public function prueba($prueba) {
         return $prueba;
     }
 
