@@ -21,19 +21,28 @@ class NotesController extends Controller {
         $this->middleware('auth');
     }
 
+    /**
+     * Url a la que se accede desde el scanner
+     * @param type $pack
+     * @param type $note
+     * @return type
+     */
     public function getIndex($pack, $note) {
         $packid = \App\Classes\Numeracion::decodificar(substr($pack, 1));
         $pack = \App\Pack::find($packid);
         $note = $pack->notes()->where("numero", $note)->first();
-
-        if ($note->contenido == "http://www.qrnotes.co/img/upload.png") {
-            return view("app.subir_note");
-        } else {
-            if ($note->titulo == "Activa" || $note->descripcion == "Utiliza tu note escaneando el código en el sticker...") {
-                return view("app.formulario_note");
+        if ($pack->user_id == Auth::user()->id) {
+            if ($note->contenido == "http://www.qrnotes.co/img/upload.png") {
+                return view("app.subir_note");
             } else {
-                return view("app.note_vista")->withNote($note);
+                if ($note->titulo == "Activa" || $note->descripcion == "Utiliza tu note escaneando el código en el sticker...") {
+                    return view("app.formulario_note");
+                } else {
+                    return view("app.note_vista")->withNote($note);
+                }
             }
+        }else{
+            return "Este pack no te pertenece";
         }
     }
 
@@ -64,8 +73,6 @@ class NotesController extends Controller {
             $note->save();
             return back();
         }
-        
-        
     }
 
     public function getRegistro($pack, $note, $otro) {

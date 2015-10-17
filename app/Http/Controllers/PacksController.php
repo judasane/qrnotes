@@ -128,8 +128,6 @@ class PacksController extends Controller {
                 $entry->save();
 
                 if (strpos($nombreOriginal, "-")) {
-
-                    
                     $note->save();
                     $note = new \App\Note();
                     $note->pack_id = $pack->id;
