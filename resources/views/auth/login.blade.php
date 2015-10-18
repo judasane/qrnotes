@@ -48,7 +48,7 @@ $vinculos = ["auth/register" => "Regístrate acá", "/" => "Inicio"];
                                     </button>
                                 </div>
                                 <div class="col s5 m2">
-                                    <input type="checkbox"  id="filled-in-box" checked="checked" />
+                                    <input type="checkbox"  id="filled-in-box" checked="checked" name="remember" />
                                     <label for="filled-in-box">Recordarme</label>
                                 </div>
 
