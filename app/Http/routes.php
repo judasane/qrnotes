@@ -56,4 +56,3 @@ Route::get("urls/{cantidad}","PacksController@getUrls");
 Route::controller("archivos","ArchivosController");
 
 
-

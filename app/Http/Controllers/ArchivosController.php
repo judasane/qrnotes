@@ -138,4 +138,7 @@ class ArchivosController extends Controller {
         return $arreglo;
     }
 
+    public function getPruebas(){
+        return "hola jelou";
+    }
 }
